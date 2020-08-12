@@ -69,9 +69,6 @@
 		"SA_ZIP_URL": {
 			"description": "Service Accounts ZIP URL.It Should be Zipped Such that it should have a folder named accounts with SA in it "
 		},
-		"SA_ZIP_NAME": {
-			"description": "Ur Service Accounts Zip File Name"
-		},
 		"TEAM_DRIVE_ID": {
 			"description": "Destination Team Drive ID"
 		},
