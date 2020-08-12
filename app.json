@@ -70,19 +70,19 @@
 			"description": "Service Accounts ZIP URL.It Should be Zipped Such that it should have a folder named accounts with SA in it "
 		},
 		"SA_ZIP_NAME": {
-			"description": "Ur Service Accounts Zip File Name
+			"description": "Ur Service Accounts Zip File Name"
 		},
 		"TEAM_DRIVE_ID": {
 			"description": "Destination Team Drive ID"
 		},
 		"RUN_ARGS": {
-			"description": "Only Change this if U Know"
+			"description": "Only Change this if U Know",
 			"value": "['-P', '--ignore-checksum' , '--stats=1s', '--log-level=DEBUG', '--log-file=/app/icopy_cloner_debug.log']"
 		},
 		"SA_PATH": {
 			"description": "Dont Change",
 			"value": "/app/iCopy/accounts"
-		},
+		}
 	},
 	"buildpacks": [
 		{
