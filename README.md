@@ -12,3 +12,8 @@
  ## Deployment to Heroku
  
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Nenokkadine/Fclone-Bot/tree/master)
+
+## Credits 
+
+iCopy - [fxxkrlab](https://github.com/fxxkrlab/iCopy)
+Fclone - [Mawaya](https://github.com/mawaya/rclone)
