@@ -1,0 +1,107 @@
+{
+	"name": "TG-iCopyS",
+	"description": "Fclone Telegram Bot",
+	"repository": "https://github.com/Nenokkadine/Fclone-Bot",
+	"keywords": ["Fclone","Icopy"],
+	"env": {
+		"BOT_TOKEN": {
+			"description": "Get from Telegram Botfather"
+		},
+		"USER_ID": {
+			"description": "get from telegram get_id_bot"
+		},
+		"DB_CONNECT_METHOD": {
+			"description": "DB Connect Method",
+			"value": "mongodb+srv"
+		},
+		"DB_ADDRESS": {
+			"description": "MongoDB Host Address"
+		},
+		"DB_PORT": {
+			"description": "MongoDB Port, Default is 27017",
+			"value": "27017"
+		},
+		"DB_NAME": {
+			"description": "U Can give any name, Default is  iCopy",
+			"value": "iCopy"
+		},
+		"DB_USERNAME": {
+			"description": "MongoDB Username"
+		},
+		"DB_PASS": {
+			"description": "MongoDB Password"
+		},
+		"LANGUAGE": {
+			"description": "English by Default Support cn and jp",
+			"value": "eng"
+		},
+		"CLONER": {
+			"description": "Dont Change this",
+			"value": "fclone"
+		},
+		"OPTION": {
+			"description": "Copy or Sync Default is Copy",
+			"value": "copy"
+		},
+		"RCLONE_RMT": {
+			"description": "Give a Rclone Remote Name Default is also fine",
+			"value": "icopy"
+		},
+		"PARALLEL_CHECKERS": {
+			"description": "Dont Give More than 300 Heroku Free Dyno may Crash",
+			"value": "250"
+		},
+		"PARALLEL_TRANSFERS": {
+			"description": "Dont Give More than 300 Heroku Free Dyno may Crash",
+			"value": "250"
+		},
+		"MIN_SLEEP": {
+			"description": "customize drive-pacer-min-sleep",
+			"value": "1ms"
+		},
+		"SA_INIT_FILE": {
+			"description": "Give a service account File Name. ex 1.json "
+		},
+		"RCLONE_CONFIG": {
+			"description": "Dont Change",
+			"value": "/app/iCopy/config/rclone.conf"
+		},
+		"SA_ZIP_URL": {
+			"description": "Service Accounts ZIP URL.It Should be Zipped Such that it should have a folder named accounts with SA in it "
+		},
+		"SA_ZIP_NAME": {
+			"description": "Ur Service Accounts Zip File Name
+		},
+		"TEAM_DRIVE_ID": {
+			"description": "Destination Team Drive ID"
+		},
+		"RUN_ARGS": {
+			"description": "Only Change this if U Know"
+			"value": "['-P', '--ignore-checksum' , '--stats=1s', '--log-level=DEBUG', '--log-file=/app/icopy_cloner_debug.log']"
+		},
+		"SA_PATH": {
+			"description": "Dont Change",
+			"value": "/app/iCopy/accounts"
+		},
+	},
+	"buildpacks": [
+		{
+			"url": "heroku/python"
+		},
+		{
+			"url": "https://github.com/heroku/heroku-buildpack-apt.git"
+		},
+		{
+			"url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip.git"
+		},
+		{
+			"url" : "https://github.com/Nenokkadine/Fpack.git"
+		}
+	],
+    	"formation": {
+        	"worker": {
+            		"quantity": 1,
+            		"size": "free"
+       		 }
+    	}
+}
